@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>finance$ 🧙🏻‍♂️</title>
+  <link rel="shortcut icon" href="https://cdn0.iconfinder.com/data/icons/ie_Financial_set/256/15.png" type="image/x-icon">
+  <link rel="stylesheet" href="./style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,400;0,700;1,200;1,400;1,700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <header>
+    <h1 id="logo">finance$</h1>
+  </header> 
+  
+  <main class="container">
+
+    <section id="balance">
+      <h2 class="sr-only">Balanço</h2>
+     
+      <div class="card income">
+        <h3>
+          <span>Entradas</span>
+          <img src="./assets/income.svg" alt="Imagem de Entradas">
+        </h3>
+        <p>R$ 1.500,00</p>
+      </div>
+   
+      <div class="card outcome">
+        <h3>
+          <span>Saídas</span>
+          <img src="./assets/outcome.svg" alt="Imagem de Saídas">
+        </h3>
+        <p>R$ 550,00</p>
+      </div>
+
+      <div class="card balance">
+        <h3>
+          <span>Total</span>
+          <img src="./assets/total.svg" alt="Imagem de Total">
+        </h3>
+        <p>R$ 950,00</p>
+      </div>
+    </section>
+
+    <section id="transactions">
+      <h2 class="sr-only">Transações</h2>
+      <a href="#" class="button new">+ Nova Transação</a>
+      <table id="transactions-table">
+        <thead>
+          <tr>
+            <th>Descrição</th>
+            <th>Valor</th>
+            <th>Data</th>
+            <th></th>
+          </tr>
+          <tbody>
+            <tr>
+              <td class="description">Luz</td>
+              <td class="outcome">- R$ 500,00</td>
+              <td class="date">23/01/2021</td>
+              <td>
+                <img src="./assets/minus.svg" alt="Remover Transação">
+              </td>
+            </tr>
+            <tr>
+              <td class="description">Câmera</td>
+              <td class="income">R$ 1500,00</td>
+              <td class="date">25/02/2021</td>
+              <td>
+                <img src="./assets/minus.svg" alt="Remover Transação">
+              </td>
+            </tr>
+            <tr>
+              <td class="description">Ação</td>
+              <td class="outcome">- R$ 50,00</td>
+              <td class="date">31/10/2021</td>
+              <td>
+                <img src="./assets/minus.svg" alt="Remover Transação">
+              </td>
+            </tr>
+          </tbody>
+        </thead>
+      </table>
+    </section>
+
+    </main> 
+
+  <div class="modal-overlay active">
+    <div class="modal">
+      <div class="form">
+        <legend>
+          <h2>Nova Transação</h2>
+        </legend>
+        <form action="">
+          <div class="input-group">
+            <label class="sr-only" for="description">Descrição</label>
+            <input 
+              type="text" 
+              name="description" 
+              id="description"
+              placeholder="Descrição"
+            >
+            <label class="sr-only" for="amount">Valor</label>
+            <input 
+              type="number"
+              name="amount"
+              id="amount"
+              step="0.01"
+              placeholder="0,00"
+            >
+            <small class="help">Use o sinal - (negativo) para despesas e , vírgula para casas decimais</small>
+            <label class="sr-only" for="date">Data</label>
+            <input 
+                type="date" 
+                name="date" 
+                id="date"
+            >
+            <div class=actions>
+              <a href="#" class="button cancel">Cancelar</a>
+              <button>Salvar</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <footer id="footer">
+    <p>finance$ by Felipe de Aquino 🧙🏻‍♂️</p>
+  </footer>
+
+</body>
+</html>
